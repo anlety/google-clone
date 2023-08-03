@@ -7,7 +7,7 @@ import Image from 'next/image';
 
 export default function HomeSearch() {
   const [input, setInput] = useState("")
-  const [loading, setLoading] = useState(true)
+  const [loading, setLoading] = useState(false)
   const router = useRouter()
   function handleSubmit(e){
     e.preventDefault()
