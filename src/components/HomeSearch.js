@@ -3,7 +3,7 @@ import {FcSearch} from 'react-icons/fc';
 import {FaMicrophoneAlt} from 'react-icons/fa'
 import { useState } from 'react';
 import {useRouter} from 'next/navigation'
-import Image from 'next/image';
+
 
 export default function HomeSearch() {
   const [input, setInput] = useState("")
