@@ -5,8 +5,9 @@ import Link from "next/link"
 
 
 export default async function ImageSearchPage({searchParams}) {
+  const startIndex = searchParams.start || "1";
   await new Promise((resolve) => setTimeout(resolve, 10000));
-  const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.API_GOOGLE_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=image`)
+  const response = await fetch(`https://www.googleapis.com/customsearch/v1?key=${process.env.API_GOOGLE_KEY}&cx=${process.env.CONTEXT_KEY}&q=${searchParams.searchTerm}&searchType=image&start=${startIndex}`)
   if(!response.ok){
     console.log(response)
     throw new Error("Something went wrong")

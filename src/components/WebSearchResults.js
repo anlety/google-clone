@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Parser from "html-react-parser"
+import Pagination from "./Pagination";
 
 
 export default function WebSearchResults({results}) {
@@ -19,6 +20,7 @@ export default function WebSearchResults({results}) {
             <p className="text-gray-600">{Parser(result.htmlSnippet)}</p>
         </diV>
       ))}
+      <Pagination/>
     </div>
   )
 }
